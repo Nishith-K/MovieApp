@@ -1,10 +1,15 @@
 package com.nk.Movie.Service;
 
-import com.nk.Movie.Entity.Movie;
-
 import java.util.List;
 
-public interface MovieService {
+import org.springframework.stereotype.Component;
 
-    List<Movie> getMovies();
+import com.nk.Movie.Entity.Movie;
+
+@Component
+public interface MovieService {
+	
+	public Movie findByMovieId(Integer id);
+    
+	public List<Movie> getMovies();
 }
